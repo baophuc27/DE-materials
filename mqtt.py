@@ -133,3 +133,6 @@ def main():
 
     client.loop_stop()
     print('Finished.')
+
+if __name__ == "__main__":
+    main()
