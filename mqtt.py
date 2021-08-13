@@ -63,7 +63,7 @@ def parse_command_line_args():
     parser.add_argument(
             '--num_messages',
             type=int,
-            default=100,
+            default=10000,
             help='Number of messages to publish.')
     parser.add_argument(
             '--message_type',
@@ -83,6 +83,7 @@ def parse_command_line_args():
     return parser.parse_args()
 
 def main():
+    print("hello")
     args = parse_command_line_args()
 
     client = mqtt.Client(
@@ -134,5 +135,5 @@ def main():
     client.loop_stop()
     print('Finished.')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
