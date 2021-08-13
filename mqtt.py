@@ -130,8 +130,6 @@ def main():
         jsonpayload =  json.dumps(payload,indent=4)
         client.publish(mqtt_topic, jsonpayload, qos=1)
 
-        time.sleep(1 if args.message_type == 'event' else 5)
-
     client.loop_stop()
     print('Finished.')
 
